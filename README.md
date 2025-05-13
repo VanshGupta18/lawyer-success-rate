@@ -1,26 +1,39 @@
-# Lawyer Win Prediction System
+# 🏛️ Legal Case Outcome & Top Lawyer Predictor
 
-This project implements a comprehensive system for predicting lawyer success rates and recommending lawyers based on various performance metrics. The system consists of four main phases:
+This project predicts the likely outcome of legal cases and recommends the top lawyers most likely to win a case based on historical data. It uses machine learning models (Decision Tree and Random Forest) and provides an interactive interface built with Streamlit.
 
-1. Data Generation: Creates synthetic lawyer and case data
-2. Feature Engineering: Processes and prepares data for modeling
-3. Model Training: Trains multiple machine learning models
-4. Web Dashboard: Provides an interactive interface for lawyer recommendations
+---
 
-## Project Structure
+## 🚀 Features
 
-```
-lawyer_win_prediction/
-├── data/               # Generated data files
-├── models/            # Trained models and feature information
-├── src/               # Source code
-│   ├── data_generation.py
-│   └── model_training.py
-├── webapp/            # Streamlit web application
-│   └── app.py
-├── requirements.txt   # Project dependencies
-└── README.md         # This file
-```
+- Predicts legal case outcomes using ML models
+- Recommends top lawyers based on:
+  - Case type
+  - Court level
+  - Duration and contextual similarity
+- Interactive and user-friendly Streamlit UI
+- Detailed model metrics and visualizations
+- Dynamic lawyer cards with experience and confidence level
+
+---
+
+## 📁 Project Structure
+
+legal-predictor/
+│
+├── data/
+│   ├── lawyers.csv               # Lawyer profile data
+│   └── cases.csv                 # Historical case data
+│
+├── models/
+│   ├── decision_tree_model.joblib
+│   └── random_forest_model.joblib
+│
+├── app.py                        # Streamlit frontend app
+├── model_training.py             # Model training + pipeline setup
+├── requirements.txt              # Dependencies
+├── README.md                     # This file
+└── .gitignore
 
 ## Setup and Installation
 
@@ -73,30 +86,22 @@ streamlit run webapp/app.py
 ### Lawyer Information
 - Basic info: ID, law school, graduation year
 - Career info: Starting practice date, years of experience
-- Performance metrics: Average bill rate, work rate
-- Professional achievements: Awards count
 - Case statistics: Total cases handled
-- Success metrics: Overall success rate
-- Case type frequencies: Percentage breakdown by legal area
-- Financial performance: Total revenue, average revenue per case
+
 
 ### Case Information
 - Case identifiers: Case ID, lawyer ID
 - Case details: Type of case, court level
 - Timeline: Start date, end date, duration
 - Outcomes: Case result (won, lost, settled)
-- Financial metrics: Billable hours, revenue generated
+
 
 ## Model Performance
 
 The system trains and evaluates multiple models:
-- Logistic Regression
 - Decision Trees
 - Random Forest
-- Support Vector Machines
-- XGBoost
 
-The best performing model is automatically selected and used in the web dashboard.
 
 ## Contributing
 
