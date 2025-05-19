@@ -9,7 +9,8 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import plotly.graph_objects as go
 from time import time
-from plotly.subplots import make_subplotsg
+from plotly.subplots import make_subplots
+
 
 # App Configuration
 st.set_page_config(page_title="Lawyer Predictor", layout="wide")
